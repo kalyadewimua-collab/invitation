@@ -1,103 +1,194 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-<title>Wedding Invitation</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wedding Ricko & Amel</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
 
 <style>
+
 body{
-font-family: Arial;
-text-align:center;
-background:#f8f6f2;
 margin:0;
+font-family:'Poppins',sans-serif;
+background:#f9f7f3;
+color:#333;
+text-align:center;
 }
 
-.container{
-padding:40px;
+header{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),
+url('prewed1.jpg');
+background-size:cover;
+color:white;
 }
 
 h1{
-font-family:cursive;
-font-size:50px;
-color:#4a5a4a;
+font-family:'Playfair Display',serif;
+font-size:60px;
+margin:10px;
 }
 
 button{
-background:#4a5a4a;
-color:white;
-padding:12px 25px;
+padding:12px 30px;
 border:none;
-border-radius:20px;
+background:#b89b72;
+color:white;
+border-radius:30px;
 font-size:16px;
+cursor:pointer;
 }
 
-.section{
-padding:60px 20px;
+section{
+padding:70px 20px;
 }
+
+.gallery img{
+width:250px;
+margin:10px;
+border-radius:10px;
+}
+
+input,textarea{
+width:80%;
+padding:10px;
+margin:10px;
+border-radius:8px;
+border:1px solid #ccc;
+}
+
+form button{
+background:#8b6f47;
+}
+
+.rekening{
+background:#eee;
+padding:20px;
+border-radius:10px;
+display:inline-block;
+}
+
 </style>
-
 </head>
 
 <body>
 
-<div class="container">
+<header>
 
 <h3>THE WEDDING OF</h3>
 <h1>Ricko & Amel</h1>
 
-<p>12 Desember 2026</p>
+<p>Sabtu, 12 Desember 2026</p>
 
-<button onclick="document.getElementById('content').style.display='block'">
+<button onclick="document.getElementById('content').scrollIntoView({behavior:'smooth'})">
 Buka Undangan
 </button>
 
-</div>
+<audio autoplay loop>
+<source src="beautiful.mp3" type="audio/mp3">
+</audio>
 
-<div id="content" style="display:none">
+</header>
 
-<div class="section">
+<div id="content">
+
+<section>
 
 <h2>Mempelai</h2>
 
-<p><b>Ricko Ardisaputra Setiarto</b><br>
-Putra dari Bapak Ahmad & Ibu Siti</p>
+<p><b>Ricko Ardisaputra Setiarto</b><br>Putra dari Bapak .... & Ibu ....</p>
 
-<p><b>Khooirani Amalia Dewi</b><br>
-Putri dari Bapak Zuchal & Ibu Wahyuning Utami</p>
+<p><b>Khoirani Amalia Dewi</b><br>Putri dari Bapak Zuchal & Ibu Wahyuning Utami</p>
 
-</div>
+</section>
 
-<div class="section">
+<section>
 
 <h2>Detail Acara</h2>
 
 <p>
 Akad Nikah<br>
-Sabtu, 12 Desember 2026<br>
+12 Desember 2026<br>
 08.00 WIB
 </p>
 
 <p>
 Resepsi<br>
-Sabtu, 12 Desember 2026<br>
+12 Desember 2026<br>
 11.00 WIB
 </p>
 
+</section>
+
+<section class="gallery">
+
+<h2>Foto Prewedding</h2>
+
+<img src="foto1.jpg">
+<img src="foto2.jpg">
+<img src="foto3.jpg">
+
+</section>
+
+<section>
+
+<h2>Konfirmasi Kehadiran</h2>
+
+<form>
+
+<input type="text" placeholder="Nama Anda">
+
+<br>
+
+<select style="padding:10px;border-radius:8px">
+<option>Konfirmasi Kehadiran</option>
+<option>Hadir</option>
+<option>Tidak Hadir</option>
+</select>
+
+<br>
+
+<textarea placeholder="Ucapan & Doa"></textarea>
+
+<br>
+
+<button>Kirim</button>
+
+</form>
+
+</section>
+
+<section>
+
+<h2>Wedding Gift</h2>
+
+<p>Bagi yang ingin memberikan hadiah secara online</p>
+
+<div class="rekening">
+
+<p><b>BCA</b></p>
+<p>8465633341</p>
+<p>a.n Khoirani A.D</p>
+
 </div>
 
-<div class="section">
+</section>
 
-<p>
-Merupakan suatu kehormatan bagi kami apabila
-Bapak/Ibu/Saudara/i berkenan hadir.
-</p>
+<section>
+
+<p>Merupakan suatu kehormatan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir.</p>
 
 <h3>Ricko & Amel</h3>
 
-</div>
+</section>
 
 </div>
 
 </body>
 </html>
-
