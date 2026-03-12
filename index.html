@@ -2,6 +2,7 @@
 <html lang="id">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -19,19 +20,9 @@ text-align:center;
 color:#333;
 overflow-x:hidden;
 }
-<div id="amplop">
 
-<div class="surat">
+/* AMPlOP */
 
-<h2>Undangan Pernikahan</h2>
-
-<h1>Ricko & Amel</h1>
-
-<button onclick="bukaUndangan()">Buka Undangan</button>
-
-</div>
-
-</div>
 #amplop{
 position:fixed;
 width:100%;
@@ -50,14 +41,6 @@ border-radius:10px;
 box-shadow:0 5px 20px rgba(0,0,0,0.2);
 }
 
-function bukaUndangan(){
-
-document.getElementById("amplop").style.display="none";
-
-document.getElementById("musik").play();
-
-}  
-  
 /* COVER */
 
 .cover{
@@ -68,7 +51,7 @@ justify-content:center;
 align-items:center;
 background:
 linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),
-url('foto3.jpg.jpg');
+url('foto3.jpg');
 background-size:cover;
 background-position:center;
 color:white;
@@ -128,16 +111,6 @@ width:100%;
 border-radius:12px;
 }
 
-/* FORM */
-
-input,textarea,select{
-width:80%;
-padding:10px;
-margin:8px;
-border-radius:8px;
-border:1px solid #ccc;
-}
-
 /* REKENING */
 
 .rekening{
@@ -147,12 +120,11 @@ padding:20px;
 border-radius:10px;
 }
 
-/* BUNGA JATUH */
+/* BUNGA */
 
 .bunga{
 position:fixed;
 top:-10px;
-color:pink;
 font-size:20px;
 animation:jatuh linear infinite;
 }
@@ -168,6 +140,22 @@ animation:jatuh linear infinite;
 
 <body>
 
+<!-- AMPlOP -->
+
+<div id="amplop">
+
+<div class="surat">
+
+<h2>Undangan Pernikahan</h2>
+
+<h1>Ricko & Amel</h1>
+
+<button onclick="bukaUndangan()">Buka Undangan</button>
+
+</div>
+
+</div>
+
 <!-- COVER -->
 
 <div class="cover">
@@ -181,8 +169,6 @@ animation:jatuh linear infinite;
 <h3 id="namaTamu"></h3>
 
 <div id="countdown"></div>
-
-<button onclick="bukaUndangan()">Buka Undangan</button>
 
 </div>
 
@@ -212,70 +198,31 @@ kepadanya, dan dijadikan-Nya di antaramu rasa kasih dan sayang."
 
 <section>
 
-<h2>Mempelai</h2>
-
-<p>
-
-<b>Ricko Ardisaputra Setiarto</b><br>
-Putra dari Bapak Kusnadi Setiarto & Ibu Maryati
-
-</p>
-
-<p>
-
-<b>Khoirani Amalia Dewi</b><br>
-Putri dari Bapak Zuchal & Ibu Wahyuning Utami
-
-</p>
-
-</section>
-
-<section>
-
-<h2>Detail Acara</h2>
-
-<p>Akad Nikah</p>
-<p>12 Desember 2026 | 08:00 WIB</p>
-
-<p>Resepsi</p>
-<p>12 Desember 2026 | 11:00 WIB</p>
-
-<a href="https://share.google/psIzTRJ3QcLaaVQKx" target="_blank">
-<button>Lihat Lokasi</button>
-</a>
-
-</section>
-
-<section>
-
 <h2>Foto Prewedding</h2>
 
 <div class="slider">
 
 <img id="slide" src="foto1.jpg.jpg">
 <img id="slide" src="foto2.jpg.jpg">
-<img id="slide" src="DSC01567.jpg">
   
 </div>
 
 </section>
 
-
 <section>
 
 <h2>Konfirmasi Kehadiran</h2>
 
-<iframe 
-src="https://docs.google.com/forms/d/e/1FAIpQLSe1yyHYOtvmy_zUA9xjMDsL_X0XhBbRgZhR1o62wQhHdSnygA/viewform?usp=publish-editor"
+<iframe
+src="https://docs.google.com/forms/d/e/1FAIpQLSe1yyHYOtvmy_zUA9xjMDsL_X0XhBbRgZhR1o62wQhHdSnygA/viewform?embedded=true"
 width="100%"
-height="600"
-frameborder="0">
+height="600">
 </iframe>
-
 
 </section>
 
 <section>
+
 
 <h2>Wedding Gift</h2>
 
@@ -283,25 +230,15 @@ frameborder="0">
 
 <div class="rekening">
 
-<p><b>BCA</b></p>
+<p><b>Bank BCA</b></p>
 
 <p id="rek">8465633341</p>
 
-<button onclick="copyRek()">Copy Rekening</button>
+<p id="namaRek">a.n Khoirani A Dewi</p>
+
+<button onclick="copyRek()">Copy Nomor Rekening</button>
 
 </div>
-  
-  
-</section>
-
-<section>
-
-<p>
-Merupakan suatu kehormatan bagi kami apabila
-Bapak/Ibu/Saudara/i berkenan hadir.
-</p>
-
-<h3>Ricko & Amel</h3>
 
 </section>
 
@@ -313,7 +250,7 @@ Bapak/Ibu/Saudara/i berkenan hadir.
 
 function bukaUndangan(){
 
-document.getElementById('isi').scrollIntoView({behavior:'smooth'});
+document.getElementById("amplop").style.display="none";
 
 document.getElementById("musik").play();
 
@@ -342,7 +279,7 @@ hari+" Hari "+jam+" Jam "+menit+" Menit";
 
 /* SLIDER FOTO */
 
-var gambar=["foto1.jpg","foto2.jpg","foto3.jpg"];
+var gambar=["foto1.jpg","foto2.jpg","DSC01567.jpg"];
 
 var i=0;
 
@@ -355,6 +292,18 @@ if(i>=gambar.length){i=0;}
 document.getElementById("slide").src=gambar[i];
 
 },3000);
+
+/* COPY REKENING */
+
+function copyRek(){
+
+var rek=document.getElementById("rek").innerText;
+
+navigator.clipboard.writeText(rek);
+
+alert("Nomor rekening berhasil disalin");
+
+}
 
 /* NAMA TAMU */
 
@@ -372,7 +321,7 @@ document.getElementById("namaTamu").innerText = tamu;
 
 setInterval(function(){
 
-var bunga = document.createElement("div");
+var bunga=document.createElement("div");
 
 bunga.classList.add("bunga");
 
@@ -392,6 +341,3 @@ setTimeout(()=>{bunga.remove();},6000);
 
 </body>
 </html>
-
-
-
