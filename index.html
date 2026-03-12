@@ -15,10 +15,49 @@ body{
 margin:0;
 font-family:'Poppins',sans-serif;
 background:#faf7f2;
-color:#333;
 text-align:center;
+color:#333;
+overflow-x:hidden;
+}
+<div id="amplop">
+
+<div class="surat">
+
+<h2>Undangan Pernikahan</h2>
+
+<h1>Ricko & Amel</h1>
+
+<button onclick="bukaUndangan()">Buka Undangan</button>
+
+</div>
+
+</div>
+#amplop{
+position:fixed;
+width:100%;
+height:100vh;
+background:#f4eee6;
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:9999;
 }
 
+.surat{
+background:white;
+padding:40px;
+border-radius:10px;
+box-shadow:0 5px 20px rgba(0,0,0,0.2);
+}
+
+function bukaUndangan(){
+
+document.getElementById("amplop").style.display="none";
+
+document.getElementById("musik").play();
+
+}  
+  
 /* COVER */
 
 .cover{
@@ -29,40 +68,42 @@ justify-content:center;
 align-items:center;
 background:
 linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),
-url('foto3.jpg.jpg');
+url('foto3.jpg');
 background-size:cover;
 background-position:center;
 color:white;
 }
 
-.namaPengantin{
-font-family:'Great Vibes',cursive;
-font-size:85px;
+.nama{
+font-family:'Great Vibes';
+font-size:90px;
 margin:10px;
 }
 
-.cover p{
-font-size:18px;
-}
-
-/* COUNTDOWN */
-
-.countdown{
-font-size:24px;
-margin:20px;
-font-weight:bold;
-}
-
-/* BUTTON */
-
 button{
-padding:12px 28px;
+padding:12px 30px;
 border:none;
 background:#b89b72;
 color:white;
 border-radius:25px;
 font-size:16px;
 cursor:pointer;
+}
+
+/* AYAT */
+
+.ayat{
+max-width:700px;
+margin:auto;
+font-style:italic;
+line-height:1.7;
+}
+
+/* COUNTDOWN */
+
+#countdown{
+font-size:22px;
+margin:20px;
 }
 
 /* SECTION */
@@ -72,23 +113,19 @@ padding:70px 20px;
 }
 
 h2{
-font-family:'Playfair Display',serif;
-font-size:30px;
-margin-bottom:20px;
+font-family:'Playfair Display';
 }
 
 /* GALERI */
 
-.gallery{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
+.slider{
+max-width:500px;
+margin:auto;
 }
 
-.gallery img{
-width:250px;
-margin:10px;
-border-radius:10px;
+.slider img{
+width:100%;
+border-radius:12px;
 }
 
 /* FORM */
@@ -99,7 +136,6 @@ padding:10px;
 margin:8px;
 border-radius:8px;
 border:1px solid #ccc;
-font-family:'Poppins';
 }
 
 /* REKENING */
@@ -109,6 +145,21 @@ background:#eee;
 display:inline-block;
 padding:20px;
 border-radius:10px;
+}
+
+/* BUNGA JATUH */
+
+.bunga{
+position:fixed;
+top:-10px;
+color:pink;
+font-size:20px;
+animation:jatuh linear infinite;
+}
+
+@keyframes jatuh{
+0%{transform:translateY(-10px);}
+100%{transform:translateY(100vh);}
 }
 
 </style>
@@ -121,42 +172,60 @@ border-radius:10px;
 
 <div class="cover">
 
-<h3>THE WEDDING OF</h3>
+<h3>The Wedding Of</h3>
 
-<h1 class="namaPengantin">Ricko & Amel</h1>
+<h1 class="nama">Ricko & Amel</h1>
 
-<p>Sabtu, 12 Desember 2026</p>
+<p>Kepada Yth:</p>
 
-<div class="countdown" id="countdown"></div>
+<h3 id="namaTamu"></h3>
 
-<button onclick="document.getElementById('isi').scrollIntoView({behavior:'smooth'});document.gentElmentById('mySong').play();">
-Buka Undangan
-</button>
+<div id="countdown"></div>
+
+<button onclick="bukaUndangan()">Buka Undangan</button>
 
 </div>
 
-<!-- MUSIK -->
-
-<audio autoplay loop>
+<audio id="musik" loop>
 <source src="Westlife_-_Beautiful_In_White_" type="audio/mp3">
 </audio>
 
-<!-- ISI WEBSITE -->
-
 <div id="isi">
+
+<section>
+
+<h2>بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم</h2>
+
+<p class="ayat">
+
+"Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan
+untukmu pasangan dari jenismu sendiri supaya kamu merasa tenteram
+kepadanya, dan dijadikan-Nya di antaramu rasa kasih dan sayang."
+
+<br><br>
+
+(QS. Ar-Rum: 21)
+
+</p>
+
+</section>
 
 <section>
 
 <h2>Mempelai</h2>
 
 <p>
+
 <b>Ricko Ardisaputra Setiarto</b><br>
 Putra dari Bapak Kusnadi Setiarto & Ibu Maryati
+
 </p>
 
 <p>
+
 <b>Khoirani Amalia Dewi</b><br>
 Putri dari Bapak Zuchal & Ibu Wahyuning Utami
+
 </p>
 
 </section>
@@ -165,17 +234,15 @@ Putri dari Bapak Zuchal & Ibu Wahyuning Utami
 
 <h2>Detail Acara</h2>
 
-<p>
-Akad Nikah<br>
-12 Desember 2026<br>
-08.00 WIB
-</p>
+<p>Akad Nikah</p>
+<p>12 Desember 2026 | 08:00 WIB</p>
 
-<p>
-Resepsi<br>
-12 Desember 2026<br>
-11.00 WIB
-</p>
+<p>Resepsi</p>
+<p>12 Desember 2026 | 11:00 WIB</p>
+
+<a href="https://share.google/psIzTRJ3QcLaaVQKx" target="_blank">
+<button>Lihat Lokasi</button>
+</a>
 
 </section>
 
@@ -183,11 +250,9 @@ Resepsi<br>
 
 <h2>Foto Prewedding</h2>
 
-<div class="gallery">
+<div class="slider">
 
-<img src="foto1.jpg.jpg">
-<img src="foto2.jpg.jpg">
-<img src="foto3.jpg.jpg">
+<img id="slide" src="foto1.jpg.jpg">
 
 </div>
 
@@ -199,7 +264,18 @@ Resepsi<br>
 
 <form>
 
-<input type="text" placeholder="Nama Anda">
+<section>
+
+<h2>Konfirmasi Kehadiran</h2>
+
+<iframe 
+src="https://docs.google.com/forms/d/e/1FAIpQLSe1yyHYOtvmy_zUA9xjMDsL_X0XhBbRgZhR1o62wQhHdSnygA/viewform?usp=header"
+width="100%"
+height="600"
+frameborder="0">
+</iframe>
+
+</section>
 
 <br>
 
@@ -230,11 +306,23 @@ Resepsi<br>
 <div class="rekening">
 
 <p><b>BCA</b></p>
-<p>8465633341</p>
-<p>a.n Khoirani A.D</p>
+
+<p id="rek">8465633341</p>
+
+<button onclick="copyRek()">Copy Rekening</button>
 
 </div>
+  
+function copyRek(){
 
+var rek = document.getElementById("rek").innerText;
+
+navigator.clipboard.writeText(rek);
+
+alert("Nomor rekening berhasil disalin");
+
+}
+  
 </section>
 
 <section>
@@ -252,29 +340,86 @@ Bapak/Ibu/Saudara/i berkenan hadir.
 
 <script>
 
+/* BUKA UNDANGAN */
+
+function bukaUndangan(){
+
+document.getElementById('isi').scrollIntoView({behavior:'smooth'});
+
+document.getElementById("musik").play();
+
+}
+
 /* COUNTDOWN */
 
-var tanggalNikah = new Date("Dec 12, 2026 08:00:00").getTime();
+var tanggal = new Date("Dec 12, 2026 08:00:00").getTime();
 
-var hitung = setInterval(function(){
+setInterval(function(){
 
 var sekarang = new Date().getTime();
 
-var selisih = tanggalNikah - sekarang;
+var selisih = tanggal - sekarang;
 
-var hari = Math.floor(selisih / (1000 * 60 * 60 * 24));
-var jam = Math.floor((selisih % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-var menit = Math.floor((selisih % (1000 * 60 * 60)) / (1000 * 60));
+var hari = Math.floor(selisih/(1000*60*60*24));
+
+var jam = Math.floor((selisih%(1000*60*60*24))/(1000*60*60));
+
+var menit = Math.floor((selisih%(1000*60*60))/(1000*60));
 
 document.getElementById("countdown").innerHTML =
-hari + " Hari " + jam + " Jam " + menit + " Menit";
+hari+" Hari "+jam+" Jam "+menit+" Menit";
 
 },1000);
+
+/* SLIDER FOTO */
+
+var gambar=["foto1.jpg","foto2.jpg","foto3.jpg"];
+
+var i=0;
+
+setInterval(function(){
+
+i++;
+
+if(i>=gambar.length){i=0;}
+
+document.getElementById("slide").src=gambar[i];
+
+},3000);
+
+/* NAMA TAMU */
+
+var url = new URLSearchParams(window.location.search);
+
+var tamu = url.get('to');
+
+if(tamu){
+
+document.getElementById("namaTamu").innerText = tamu;
+
+}
+
+/* BUNGA JATUH */
+
+setInterval(function(){
+
+var bunga = document.createElement("div");
+
+bunga.classList.add("bunga");
+
+bunga.innerHTML="🌸";
+
+bunga.style.left=Math.random()*100+"vw";
+
+bunga.style.animationDuration=(Math.random()*3+3)+"s";
+
+document.body.appendChild(bunga);
+
+setTimeout(()=>{bunga.remove();},6000);
+
+},500);
 
 </script>
 
 </body>
-
 </html>
-
-
