@@ -27,21 +27,33 @@ display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
-background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('prewed1.jpg');
+background:
+linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),
+url('foto3.jpg.jpg');
 background-size:cover;
 background-position:center;
 color:white;
 }
 
-.cover h1{
+.namaPengantin{
 font-family:'Great Vibes',cursive;
-font-size:75px;
+font-size:85px;
 margin:10px;
 }
 
 .cover p{
 font-size:18px;
 }
+
+/* COUNTDOWN */
+
+.countdown{
+font-size:24px;
+margin:20px;
+font-weight:bold;
+}
+
+/* BUTTON */
 
 button{
 padding:12px 28px;
@@ -111,9 +123,11 @@ border-radius:10px;
 
 <h3>THE WEDDING OF</h3>
 
-<h1>Ricko & Amel</h1>
+<h1 class="namaPengantin">Ricko & Amel</h1>
 
 <p>Sabtu, 12 Desember 2026</p>
+
+<div class="countdown" id="countdown"></div>
 
 <button onclick="document.getElementById('isi').scrollIntoView({behavior:'smooth'})">
 Buka Undangan
@@ -171,9 +185,9 @@ Resepsi<br>
 
 <div class="gallery">
 
-<img src="foto1.jpg.jpg">
-<img src="foto2.jpg.jpg">
-<img src="foto3.jpg.jpg">
+<img src="foto1.jpg">
+<img src="foto2.jpg">
+<img src="foto3.jpg">
 
 </div>
 
@@ -235,6 +249,29 @@ Bapak/Ibu/Saudara/i berkenan hadir.
 </section>
 
 </div>
+
+<script>
+
+/* COUNTDOWN */
+
+var tanggalNikah = new Date("Dec 12, 2026 08:00:00").getTime();
+
+var hitung = setInterval(function(){
+
+var sekarang = new Date().getTime();
+
+var selisih = tanggalNikah - sekarang;
+
+var hari = Math.floor(selisih / (1000 * 60 * 60 * 24));
+var jam = Math.floor((selisih % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+var menit = Math.floor((selisih % (1000 * 60 * 60)) / (1000 * 60));
+
+document.getElementById("countdown").innerHTML =
+hari + " Hari " + jam + " Jam " + menit + " Menit";
+
+},1000);
+
+</script>
 
 </body>
 
