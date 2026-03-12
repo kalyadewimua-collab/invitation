@@ -90,6 +90,38 @@ font-style:italic;
 line-height:1.7;
 }
 
+.mempelai{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:40px;
+margin-top:30px;
+}
+
+.card-mempelai{
+background:white;
+padding:25px;
+border-radius:15px;
+width:260px;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+.card-mempelai img{
+width:180px;
+height:180px;
+object-fit:cover;
+border-radius:50%;
+border:6px solid #f0e6d8;
+margin-bottom:15px;
+}
+
+.nama-pengantin{
+font-family:'Allura',cursive;
+font-size:36px;
+color:#b89b72;
+margin:10px 0;
+}
+  
 /* COUNTDOWN */
 
 #countdown{
@@ -313,6 +345,8 @@ document.getElementById("musik").play();
 
 }
 
+<button onclick="bukaUndangan()">Buka Undangan</button>
+
 /* COUNTDOWN */
 
 var tanggal = new Date("Dec 12, 2026 08:00:00").getTime();
@@ -333,40 +367,6 @@ document.getElementById("countdown").innerHTML =
 hari+" Hari "+jam+" Jam "+menit+" Menit";
 
 },1000);
-
-/* MEMPELAI */
-
-.mempelai{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:40px;
-margin-top:30px;
-}
-
-.card-mempelai{
-background:white;
-padding:25px;
-border-radius:15px;
-width:260px;
-box-shadow:0 10px 25px rgba(0,0,0,0.1);
-}
-
-.card-mempelai img{
-width:180px;
-height:180px;
-object-fit:cover;
-border-radius:50%;
-border:6px solid #f0e6d8;
-margin-bottom:15px;
-}
-
-.nama-pengantin{
-font-family:'Allura',cursive;
-font-size:36px;
-color:#b89b72;
-margin:10px 0;
-}
 
 section{
 
@@ -460,6 +460,7 @@ setTimeout(()=>{bunga.remove();},8000);
 
 </body>
 </html>
+
 
 
 
