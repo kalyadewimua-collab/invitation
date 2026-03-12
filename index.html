@@ -9,6 +9,7 @@
 <title>Wedding Ricko & Amel</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500&family=Poppins&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Allura&family=Cinzel:wght@500&display=swap" rel="stylesheet">
 
 <style>
 
@@ -206,19 +207,35 @@ kepadanya, dan dijadikan-Nya di antaramu rasa kasih dan sayang."
 
 <h2>Mempelai</h2>
 
-<p>
+<div class="mempelai">
 
-<b>Ricko Ardisaputra Setiarto</b><br>
-Putra dari Bapak Kusnadi Setiarto & Ibu Maryati
+<div class="card-mempelai">
 
-</p>
+<img src="foto1.jpg">
 
-<p>
+<h3 class="nama-pengantin">Ricko Ardisaputra</h3>
 
-<b>Khoirani Amalia Dewi</b><br>
-Putri dari Bapak Zuchal & Ibu Wahyuning Utami
+<p>Putra dari</p>
 
-</p>
+<p>Bapak Kusnadi Setiarto<br>
+& Ibu Maryati</p>
+
+</div>
+
+<div class="card-mempelai">
+
+<img src="foto2.jpg">
+
+<h3 class="nama-pengantin">Khoirani Amalia Dewi</h3>
+
+<p>Putri dari</p>
+
+<p>Bapak Zuchal<br>
+& Ibu Wahyuning Utami</p>
+
+</div>
+
+</div>
 
 </section>
 <section>
@@ -317,6 +334,65 @@ hari+" Hari "+jam+" Jam "+menit+" Menit";
 
 },1000);
 
+/* MEMPELAI */
+
+.mempelai{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:40px;
+margin-top:30px;
+}
+
+.card-mempelai{
+background:white;
+padding:25px;
+border-radius:15px;
+width:260px;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+.card-mempelai img{
+width:180px;
+height:180px;
+object-fit:cover;
+border-radius:50%;
+border:6px solid #f0e6d8;
+margin-bottom:15px;
+}
+
+.nama-pengantin{
+font-family:'Allura',cursive;
+font-size:36px;
+color:#b89b72;
+margin:10px 0;
+}
+
+section{
+
+padding:70px 20px;
+
+background:rgba(255,255,255,0.9);
+
+margin:40px auto;
+
+max-width:900px;
+
+border-radius:15px;
+
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+
+background-image:url('https://www.transparenttextures.com/patterns/leaf.png');
+
+}
+
+h2{
+font-family:'Cinzel',serif;
+font-size:28px;
+letter-spacing:2px;
+color:#8a6d3b;
+}
+
 /* SLIDER FOTO */
 
 var gambar=["foto1.jpg","foto2.jpg","DSC01567.jpg"];
@@ -384,6 +460,7 @@ setTimeout(()=>{bunga.remove();},8000);
 
 </body>
 </html>
+
 
 
 
