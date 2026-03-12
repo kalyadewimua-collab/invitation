@@ -5,12 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ricko & Amel Wedding</title>
 
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500&family=Poppins&display=swap" rel="stylesheet">
+
 <style>
 
 body{
 margin:0;
-font-family:'Palatino Linotype',serif;
+font-family:'Poppins',sans-serif;
 background:#faf7f2;
+color:#333;
 text-align:center;
 }
 
@@ -24,18 +27,13 @@ background:url('foto3.jpg.jpg') center/cover;
 color:white;
 }
 
-..namaPengantin{
-font-family:'bromello-Regular';
-font-size:35px;
+.cover h1{
+font-family:'Great Vibes',cursive;
+font-size:75px;
+margin:10px;
 }
 
-.namaMempelai{
-font-family:'bromello-Regular';
-font-size:35px;
-}
-
-.namaOrtu{
-font-family:'Saturday';
+.cover p{
 font-size:18px;
 }
 
@@ -53,13 +51,14 @@ cursor:pointer;
 padding:70px 20px;
 }
 
-.countdown{
+h2{
+font-family:'Playfair Display',serif;
 font-size:30px;
-margin:20px;
+margin-bottom:20px;
 }
 
 .gallery{
-display:flex;
+display:flex;  
 justify-content:center;
 flex-wrap:wrap;
 }
@@ -76,6 +75,7 @@ padding:10px;
 margin:10px;
 border-radius:8px;
 border:1px solid #ccc;
+font-family:'Poppins';
 }
 
 .rekening{
@@ -95,6 +95,8 @@ border-radius:10px;
 
 <h3>THE WEDDING OF</h3>
 <h1>Ricko & Amel</h1>
+
+<p>Sabtu, 12 Desember 2026</p>
 
 <div class="countdown" id="countdown"></div>
 
@@ -117,18 +119,18 @@ Buka Undangan
 <h2>Mempelai</h2>
 
 <p>
-<b class="namaMempelai">Ricko Ardisaputra Setiarto</b><br>
-<span class="namaOrtu">Putra dari Bapak Kusnadi Setiarto & Ibu Maryati</span>
+<b>Ricko Ardisaputra Setiarto</b><br>
+Putra dari Bapak Kusnadi Setiarto & Ibu Maryati
 </p>
 
 <p>
-<b class="namaMempelai">Khoirani Amalia Dewi</b><br>
-<span class="namaOrtu">Putri dari Bapak Zuchal & Ibu Wahyuning Utami</span>
+<b>Khoirani Amalia Dewi</b><br>
+Putri dari Bapak Zuchal & Ibu Wahyuning Utami
 </p>
 
-</div>
+</section>
 
-<div class="section">
+<section>
 
 <h2>Detail Acara</h2>
 
@@ -136,9 +138,9 @@ Buka Undangan
 
 <p>Resepsi<br>12 Desember 2026<br>11.00 WIB</p>
 
-</div>
+</section>
 
-<div class="section">
+<section>
 
 <h2>Foto Prewedding</h2>
 
@@ -150,37 +152,41 @@ Buka Undangan
 
 </div>
 
-</div>
+</section>
 
-<div class="section">
+<section>
 
 <h2>Konfirmasi Kehadiran</h2>
 
-<div class="form">
+<form>
 
 <input type="text" placeholder="Nama Anda">
 
+<br>
+  
 <select>
 <option>Konfirmasi Kehadiran</option>
 <option>Hadir</option>
 <option>Tidak Hadir</option>
 </select>
 
+<br>
+  
 <textarea placeholder="Ucapan & Doa"></textarea>
 
 <br>
 
 <button>Kirim</button>
 
-</div>
+</form>
 
-</div>
+</section>
 
-<div class="section">
+<section>
 
 <h2>Wedding Gift</h2>
 
-<p>Bagi yang ingin memberikan hadiah</p>
+<p>Bagi yang ingin memberikan hadiah secara online</p>
 
 <div class="rekening">
 
@@ -190,9 +196,9 @@ Buka Undangan
 
 </div>
 
-</div>
+</section>
 
-<div class="section">
+<section>
 
 <p>Merupakan suatu kehormatan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir.</p>
 
@@ -225,6 +231,7 @@ days + " Hari " + hours + " Jam " + minutes + " Menit";
 
 </body>
 </html>
+
 
 
 
