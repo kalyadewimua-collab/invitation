@@ -3,64 +3,50 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ricko & Amel Wedding</title>
+<title>Wedding Ricko & Amel</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500&family=Poppins&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
 
 <style>
 
 body{
 margin:0;
 font-family:'Poppins',sans-serif;
-background:#faf7f2;
+background:#f9f7f3;
 color:#333;
 text-align:center;
 }
 
-.cover{
+header{
 height:100vh;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
-background:url('foto3.jpg.jpg') center/cover;
+background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),
+url('foto3.jpg.jpg');
+background-size:cover;
 color:white;
 }
 
-.cover h1{
-font-family:'Great Vibes',cursive;
-font-size:75px;
+h1{
+font-family:'Playfair Display',serif;
+font-size:60px;
 margin:10px;
-}
-
-.cover p{
-font-size:18px;
 }
 
 button{
 padding:12px 30px;
 border:none;
-border-radius:30px;
 background:#b89b72;
 color:white;
+border-radius:30px;
 font-size:16px;
 cursor:pointer;
 }
 
-.section{
+section{
 padding:70px 20px;
-}
-
-h2{
-font-family:'Playfair Display',serif;
-font-size:30px;
-margin-bottom:20px;
-}
-
-.gallery{
-display:flex;  
-justify-content:center;
-flex-wrap:wrap;
 }
 
 .gallery img{
@@ -69,29 +55,31 @@ margin:10px;
 border-radius:10px;
 }
 
-.form input,textarea,select{
+input,textarea{
 width:80%;
 padding:10px;
 margin:10px;
 border-radius:8px;
 border:1px solid #ccc;
-font-family:'Poppins';
+}
+
+form button{
+background:#8b6f47;
 }
 
 .rekening{
 background:#eee;
 padding:20px;
-display:inline-block;
 border-radius:10px;
+display:inline-block;
 }
 
 </style>
-
 </head>
 
 <body>
 
-<div class="cover">
+<header>
 
 <h3>THE WEDDING OF</h3>
 <h1>Ricko & Amel</h1>
@@ -99,34 +87,26 @@ border-radius:10px;
 <p>Sabtu, 12 Desember 2026</p>
 
 <div class="countdown" id="countdown"></div>
-
-<button onclick="document.getElementById('isi').scrollIntoView({behavior:'smooth'})">
+  
+<button onclick="document.getElementById('content').scrollIntoView({behavior:'smooth'})">
 Buka Undangan
 </button>
 
-</div>
-
-<audio id="musik" loop>
+<audio autoplay loop>
 <source src="Westlife_-_Beautiful_In_White_(mp3.pm).mp3" type="audio/mp3">
 </audio>
 
-<button onclick="document.getElementById('musik').play()">Play Music</button>
+</header>
 
-<div id="isi">
+<div id="content">
 
-<div class="section">
+<section>
 
 <h2>Mempelai</h2>
 
-<p>
-<b>Ricko Ardisaputra Setiarto</b><br>
-Putra dari Bapak Kusnadi Setiarto & Ibu Maryati
-</p>
+<p><b>Ricko Ardisaputra Setiarto</b><br>Putra dari Bapak Kusnadi Saputro & Ibu Maryati</p>
 
-<p>
-<b>Khoirani Amalia Dewi</b><br>
-Putri dari Bapak Zuchal & Ibu Wahyuning Utami
-</p>
+<p><b>Khoirani Amalia Dewi</b><br>Putri dari Bapak Zuchal & Ibu Wahyuning Utami</p>
 
 </section>
 
@@ -134,23 +114,27 @@ Putri dari Bapak Zuchal & Ibu Wahyuning Utami
 
 <h2>Detail Acara</h2>
 
-<p>Akad Nikah<br>12 Desember 2026<br>08.00 WIB</p>
+<p>
+Akad Nikah<br>
+12 Desember 2026<br>
+08.00 WIB
+</p>
 
-<p>Resepsi<br>12 Desember 2026<br>11.00 WIB</p>
+<p>
+Resepsi<br>
+12 Desember 2026<br>
+11.00 WIB
+</p>
 
 </section>
 
-<section>
+<section class="gallery">
 
 <h2>Foto Prewedding</h2>
 
-<div class="gallery">
-
-<img src="foto1.jpg.jpg">
-<img src="foto2.jpg.jpg">
-<img src="foto3.jpg.jpg">
-
-</div>
+<img src="foto1.jpg">
+<img src="foto2.jpg">
+<img src="foto3.jpg">
 
 </section>
 
@@ -163,15 +147,15 @@ Putri dari Bapak Zuchal & Ibu Wahyuning Utami
 <input type="text" placeholder="Nama Anda">
 
 <br>
-  
-<select>
+
+<select style="padding:10px;border-radius:8px">
 <option>Konfirmasi Kehadiran</option>
 <option>Hadir</option>
 <option>Tidak Hadir</option>
 </select>
 
 <br>
-  
+
 <textarea placeholder="Ucapan & Doa"></textarea>
 
 <br>
@@ -191,8 +175,8 @@ Putri dari Bapak Zuchal & Ibu Wahyuning Utami
 <div class="rekening">
 
 <p><b>BCA</b></p>
-<p>8465633341</p>
-<p>a.n Khoirani A.D</p>
+<p>1234567890</p>
+<p>a.n Ricko</p>
 
 </div>
 
@@ -204,36 +188,9 @@ Putri dari Bapak Zuchal & Ibu Wahyuning Utami
 
 <h3>Ricko & Amel</h3>
 
-</div>
+</section>
 
 </div>
-
-<script>
-
-var countDownDate = new Date("Dec 12, 2026 08:00:00").getTime();
-
-var x = setInterval(function(){
-
-var now = new Date().getTime();
-
-var distance = countDownDate - now;
-
-var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-
-document.getElementById("countdown").innerHTML =
-days + " Hari " + hours + " Jam " + minutes + " Menit";
-
-}, 1000);
-
-</script>
 
 </body>
 </html>
-
-
-
-
-
-
