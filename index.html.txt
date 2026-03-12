@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Wedding Ricko & Amel</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500&family=Poppins&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+margin:0;
+font-family:'Poppins',sans-serif;
+background:#faf7f2;
+color:#333;
+text-align:center;
+}
+
+/* COVER */
+
+.cover{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('prewed1.jpg');
+background-size:cover;
+background-position:center;
+color:white;
+}
+
+.cover h1{
+font-family:'Great Vibes',cursive;
+font-size:75px;
+margin:10px;
+}
+
+.cover p{
+font-size:18px;
+}
+
+button{
+padding:12px 28px;
+border:none;
+background:#b89b72;
+color:white;
+border-radius:25px;
+font-size:16px;
+cursor:pointer;
+}
+
+/* SECTION */
+
+section{
+padding:70px 20px;
+}
+
+h2{
+font-family:'Playfair Display',serif;
+font-size:30px;
+margin-bottom:20px;
+}
+
+/* GALERI */
+
+.gallery{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.gallery img{
+width:250px;
+margin:10px;
+border-radius:10px;
+}
+
+/* FORM */
+
+input,textarea,select{
+width:80%;
+padding:10px;
+margin:8px;
+border-radius:8px;
+border:1px solid #ccc;
+font-family:'Poppins';
+}
+
+/* REKENING */
+
+.rekening{
+background:#eee;
+display:inline-block;
+padding:20px;
+border-radius:10px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- COVER -->
+
+<div class="cover">
+
+<h3>THE WEDDING OF</h3>
+
+<h1>Ricko & Amel</h1>
+
+<p>Sabtu, 12 Desember 2026</p>
+
+<button onclick="document.getElementById('isi').scrollIntoView({behavior:'smooth'})">
+Buka Undangan
+</button>
+
+</div>
+
+<!-- MUSIK -->
+
+<audio autoplay loop>
+<source src="beautiful.mp3" type="audio/mp3">
+</audio>
+
+<!-- ISI WEBSITE -->
+
+<div id="isi">
+
+<section>
+
+<h2>Mempelai</h2>
+
+<p>
+<b>Ricko Ardisaputra Setiarto</b><br>
+Putra dari Bapak .... & Ibu ....
+</p>
+
+<p>
+<b>Khoirani Amalia Dewi</b><br>
+Putri dari Bapak Zuchal & Ibu Wahyuning Utami
+</p>
+
+</section>
+
+<section>
+
+<h2>Detail Acara</h2>
+
+<p>
+Akad Nikah<br>
+12 Desember 2026<br>
+08.00 WIB
+</p>
+
+<p>
+Resepsi<br>
+12 Desember 2026<br>
+11.00 WIB
+</p>
+
+</section>
+
+<section>
+
+<h2>Foto Prewedding</h2>
+
+<div class="gallery">
+
+<img src="foto1.jpg">
+<img src="foto2.jpg">
+<img src="foto3.jpg">
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Konfirmasi Kehadiran</h2>
+
+<form>
+
+<input type="text" placeholder="Nama Anda">
+
+<br>
+
+<select>
+<option>Konfirmasi Kehadiran</option>
+<option>Hadir</option>
+<option>Tidak Hadir</option>
+</select>
+
+<br>
+
+<textarea placeholder="Ucapan & Doa"></textarea>
+
+<br>
+
+<button>Kirim</button>
+
+</form>
+
+</section>
+
+<section>
+
+<h2>Wedding Gift</h2>
+
+<p>Bagi yang ingin memberikan hadiah secara online</p>
+
+<div class="rekening">
+
+<p><b>BCA</b></p>
+<p>8465633341</p>
+<p>a.n Khoirani A.D</p>
+
+</div>
+
+</section>
+
+<section>
+
+<p>
+Merupakan suatu kehormatan bagi kami apabila
+Bapak/Ibu/Saudara/i berkenan hadir.
+</p>
+
+<h3>Ricko & Amel</h3>
+
+</section>
+
+</div>
+
+</body>
+</html>
