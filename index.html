@@ -42,22 +42,6 @@ background-image:url('https://www.transparenttextures.com/patterns/leaf.png');
 
 }
 
-.daun-kiri{
-position:fixed;
-top:0;
-left:0;
-width:200px;
-opacity:0.3;
-}
-
-.daun-kanan{
-position:fixed;
-bottom:0;
-right:0;
-width:200px;
-opacity:0.3;
-}
-
 h2{
 font-family:'Cinzel',serif;
 font-size:28px;
@@ -76,6 +60,12 @@ display:flex;
 justify-content:center;
 align-items:center;
 z-index:9999;
+transition:opacity 1s ease;
+}
+
+.amplop-hilang{
+opacity:0;
+pointer-events:none;
 }
 
 .surat{
@@ -189,14 +179,18 @@ font-family:'Cinzel'serif;
 
 /* GALERI */
 
-.slider{
-max-width:500px;
-margin:auto;
+.galeri{
+display:flex;
+gap:20px;
+overflow-x:auto;
+padding:20px;
+scroll-snap-type:x mandatory;
 }
 
-.slider img{
-width:100%;
-border-radius:12px;
+.galeri img{
+height:300px;
+border-radius:15px;
+scroll-snap-align:center;
 }
   
 <section>
@@ -218,19 +212,6 @@ padding:20px;
 border-radius:10px;
 }
 
-/* BUNGA */
-
-.bunga{
-position:fixed;
-top:-10px;
-font-size:20px;
-animation:jatuh linear infinite;
-}
-
-@keyframes jatuh{
-0%{transform:translateY(-10px);}
-100%{transform:translateY(100vh);}
-}
 
 </style>
 
@@ -346,9 +327,12 @@ kepadanya, dan dijadikan-Nya di antaramu rasa kasih dan sayang."
 
 <h2>Foto Prewedding</h2>
 
-<div class="slider">
+<div class="galeri">
 
-<img id="slide" src="foto1.jpg">
+<img src="foto1.jpg">
+<img src="foto2.jpg">
+<img src="DSC01567.jpg">
+<img src="foto3.jpg">
 
 </div>
 
@@ -395,9 +379,15 @@ height="600">
 
 function bukaUndangan(){
 
-document.getElementById("amplop").style.display="none";
+var amplop = document.getElementById("amplop");
+
+amplop.classList.add("amplop-hilang");
 
 document.getElementById("musik").play();
+
+setTimeout(function(){
+amplop.style.display="none";
+},1000);
 
 }
 
@@ -464,33 +454,9 @@ document.getElementById("namaTamu").innerText = tamu;
 
 }
 
-/* BUNGA JATUH */
-
-setInterval(function(){
-
-var bunga=document.createElement("div");
-
-bunga.classList.add("bunga");
-
-var bungaList=["✨"];
-
-bunga.innerHTML=bungaList[Math.floor(Math.random()*bungaList.length)];
-
-bunga.style.left=Math.random()*100+"vw";
-
-bunga.style.fontSize=(Math.random()*15+10)+"px";
-
-bunga.style.animationDuration=(Math.random()*6+6)+"s";
-
-document.body.appendChild(bunga);
-
-setTimeout(()=>{bunga.remove();},8000);
-
-},2000);
-</script>
-
 </body>
 </html>
+
 
 
 
