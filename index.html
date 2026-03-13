@@ -456,15 +456,15 @@ var bunga=document.createElement("div");
 
 bunga.classList.add("bunga");
 
-var bungaList=["🌸","🌺","💮"];
+var bungaList=["🍃","✨","🌿","💫"];
 
 bunga.innerHTML=bungaList[Math.floor(Math.random()*bungaList.length)];
 
 bunga.style.left=Math.random()*100+"vw";
 
-bunga.style.fontSize=(Math.random()*10+15)+"px";
+bunga.style.fontSize=(Math.random()*15+10)+"px";
 
-bunga.style.animationDuration=(Math.random()*5+5)+"s";
+bunga.style.animationDuration=(Math.random()*6+6)+"s";
 
 document.body.appendChild(bunga);
 
@@ -475,6 +475,7 @@ setTimeout(()=>{bunga.remove();},8000);
 
 </body>
 </html>
+
 
 
 
