@@ -42,6 +42,22 @@ background-image:url('https://www.transparenttextures.com/patterns/leaf.png');
 
 }
 
+.daun-kiri{
+position:fixed;
+top:0;
+left:0;
+width:200px;
+opacity:0.3;
+}
+
+.daun-kanan{
+position:fixed;
+bottom:0;
+right:0;
+width:200px;
+opacity:0.3;
+}
+
 h2{
 font-family:'Cinzel',serif;
 font-size:28px;
@@ -456,7 +472,7 @@ var bunga=document.createElement("div");
 
 bunga.classList.add("bunga");
 
-var bungaList=["🍃","✨","🌿","💫"];
+var bungaList=["✨"];
 
 bunga.innerHTML=bungaList[Math.floor(Math.random()*bungaList.length)];
 
@@ -470,11 +486,12 @@ document.body.appendChild(bunga);
 
 setTimeout(()=>{bunga.remove();},8000);
 
-},400);
+},2000);
 </script>
 
 </body>
 </html>
+
 
 
 
