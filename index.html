@@ -378,17 +378,11 @@ height="600">
 /* BUKA UNDANGAN */
 
 function bukaUndangan(){
-
 var amplop = document.getElementById("amplop");
+amplop.style.display = "none";
 
-amplop.classList.add("amplop-hilang");
-
-document.getElementById("musik").play();
-
-setTimeout(function(){
-amplop.style.display="none";
-},1000);
-
+var musik = document.getElementById("musik");
+musik.play();
 }
 
 
@@ -456,6 +450,7 @@ document.getElementById("namaTamu").innerText = tamu;
 
 </body>
 </html>
+
 
 
 
